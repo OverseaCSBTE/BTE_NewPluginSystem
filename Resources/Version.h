@@ -2,8 +2,14 @@
 #define Version_H
 
 #define Author "NekoMeow"
-#define VersionString "1.0.0.0-dev"
+
 #define VersionDword 1,0,0,0
 #define VersionBase "1.0.0.0"
+
+#if _DEBUG
+#define VersionString VersionBase "-dev"
+#else
+#define VersionString VersionBase
+#endif
 
 #endif
