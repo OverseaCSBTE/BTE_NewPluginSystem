@@ -7,7 +7,7 @@
     <Filter Include="Main">
       <UniqueIdentifier>{b62c4e13-433c-4b41-8133-f3959a756fb4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Global">
+    <Filter Include="shared">
       <UniqueIdentifier>{eccb9ff9-8de6-4c29-b0ec-194dfd1ad1b9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -15,11 +15,11 @@
     <ClInclude Include="Resources\Version.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="Global\Main.h">
-      <Filter>Global</Filter>
+    <ClInclude Include="shared\Main.h">
+      <Filter>shared</Filter>
     </ClInclude>
-    <ClInclude Include="Global\amx.h">
-      <Filter>Global</Filter>
+    <ClInclude Include="shared\amx.h">
+      <Filter>shared</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -28,7 +28,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources\amxmodx_mm.rc">
+    <ResourceCompile Include="Resources\NewPluginSystem.rc">
       <Filter>Resources</Filter>
     </ResourceCompile>
   </ItemGroup>

@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources\amxmodx_mm.rc" />
+    <ResourceCompile Include="Resources\NewPluginSystem.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Global\amx.h" />
-    <ClInclude Include="Global\Main.h" />
     <ClInclude Include="Resources\Version.h" />
+    <ClInclude Include="shared\amx.h" />
+    <ClInclude Include="shared\Main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\MetaAPI.cpp" />
@@ -34,6 +34,7 @@
     <ProjectGuid>{73E7D110-9C5A-4201-826D-B2C2688CD270}</ProjectGuid>
     <RootNamespace>amxmodxmm</RootNamespace>
     <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <ProjectName>NewPluginSystem</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
