@@ -1,6 +1,6 @@
 #ifndef Main_H
 #define Main_h
 
-#include <extdll.h>
+#include "h_export.h"
 
 #endif
