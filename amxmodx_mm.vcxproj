@@ -23,11 +23,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources\Version.h" />
-    <ClInclude Include="shared\amx.h" />
+    <ClInclude Include="shared\Common.h" />
     <ClInclude Include="shared\Main.h" />
+    <ClInclude Include="shared\Structs.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\MetaAPI.cpp" />
+    <ClCompile Include="Main\dllmain.cpp" />
+    <ClCompile Include="Main\LogSystem.cpp" />
+    <ClCompile Include="Main\PreloadSystem.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -88,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>metamod\metamod;hlsdk\common;hlsdk\engine;hlsdk\dlls;hlsdk\pm_shared;hlsdk\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;hlsdk\common;hlsdk\engine;hlsdk\dlls;hlsdk\pm_shared;hlsdk\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

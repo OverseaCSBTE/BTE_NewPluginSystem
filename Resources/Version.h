@@ -1,6 +1,8 @@
 #ifndef Version_H
 #define Version_H
 
+#define ProjectName "NewPluginSystem"
+
 #define Author "NekoMeow"
 
 #define VersionDword 1,0,0,0

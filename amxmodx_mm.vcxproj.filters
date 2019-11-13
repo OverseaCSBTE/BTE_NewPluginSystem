@@ -18,18 +18,27 @@
     <ClInclude Include="shared\Main.h">
       <Filter>shared</Filter>
     </ClInclude>
-    <ClInclude Include="shared\amx.h">
+    <ClInclude Include="shared\Common.h">
       <Filter>shared</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Main\MetaAPI.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
+    <ClInclude Include="shared\Structs.h">
+      <Filter>shared</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources\NewPluginSystem.rc">
       <Filter>Resources</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\dllmain.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\PreloadSystem.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\LogSystem.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
