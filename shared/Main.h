@@ -5,7 +5,9 @@
 #include <Windows.h>
 #include <extdll.h>
 #include <direct.h>
-//#include <enginecallback.h>
+
+#include <cvardef.h>
+#include <enginecallback.h>
 
 #define MaxPathLen 512
 #define MaxMsgLen 1024
@@ -16,6 +18,9 @@
 #include "shared/Common.h"
 
 ExportC void WINAPI GiveFnptrsToDll(enginefuncs_t *engine, globalvars_t *globals);
+
+// From Commands
+#include "shared/Commands.h"
 
 // From LogSystem
 void PrintToConsole(const char *fmt, ...);

@@ -24,6 +24,9 @@
     <ClInclude Include="shared\Structs.h">
       <Filter>shared</Filter>
     </ClInclude>
+    <ClInclude Include="shared\Commands.h">
+      <Filter>shared</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources\NewPluginSystem.rc">
@@ -38,6 +41,9 @@
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="Main\LogSystem.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\Commands.cpp">
       <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>

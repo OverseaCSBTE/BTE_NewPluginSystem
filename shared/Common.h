@@ -8,6 +8,8 @@ extern gamedll_t GameDLL;
 
 #define ExportC extern "C" __declspec(dllexport)
 
+#define CvarReg (*gEngine.pfnCVarRegister)
+#define AddServerCommand (*gEngine.pfnAddServerCommand)
 #define ServerPrint (*gEngine.pfnServerPrint)
 #define GetGameDir (*gEngine.pfnGetGameDir)
 

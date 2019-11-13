@@ -23,11 +23,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources\Version.h" />
+    <ClInclude Include="shared\Commands.h" />
     <ClInclude Include="shared\Common.h" />
     <ClInclude Include="shared\Main.h" />
     <ClInclude Include="shared\Structs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main\Commands.cpp" />
     <ClCompile Include="Main\dllmain.cpp" />
     <ClCompile Include="Main\LogSystem.cpp" />
     <ClCompile Include="Main\PreloadSystem.cpp" />
