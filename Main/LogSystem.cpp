@@ -1,6 +1,6 @@
 #include "shared\Main.h"
 
-void PrintToConsole(const char *fmt, ...)
+void LogSystem::PrintToConsole(const char* fmt, ...)
 {
 	va_list va;
 	char buf[MaxMsgLen];
@@ -18,7 +18,7 @@ void PrintToConsole(const char *fmt, ...)
 	ServerPrint(buf);
 }
 
-void Error(const char *fmt, ...)
+void LogSystem::Error(const char* fmt, ...)
 {
 	va_list ap;
 	char buf[MaxMsgLen];

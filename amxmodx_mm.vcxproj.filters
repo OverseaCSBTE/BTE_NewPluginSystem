@@ -24,7 +24,7 @@
     <ClInclude Include="shared\Structs.h">
       <Filter>shared</Filter>
     </ClInclude>
-    <ClInclude Include="shared\Commands.h">
+    <ClInclude Include="shared\Classes.h">
       <Filter>shared</Filter>
     </ClInclude>
   </ItemGroup>
@@ -34,9 +34,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\dllmain.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="Main\PreloadSystem.cpp">
       <Filter>Main</Filter>
     </ClCompile>
@@ -44,6 +41,12 @@
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="Main\Commands.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\h_export.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\DLLAPI.cpp">
       <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>

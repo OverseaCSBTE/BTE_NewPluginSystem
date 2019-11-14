@@ -3,16 +3,33 @@
 cvar_t npsDebug = { "nps_Debug", "0", FCVAR_EXTDLL, 0, NULL };
 cvar_t npsVer = { "nps_Version", VersionString, FCVAR_EXTDLL, 0, NULL };
 
-// While preloading done preprocess, we can register our commands and cvars :D
-void PreRegisterConsoleCommands()
+void CommandsSystem::Init()
 {
 	CvarReg(&npsDebug);
 	CvarReg(&npsVer);
 
-	AddServerCommand("nps", NPS_Main);
+	//AddServerCommand("nps", nps->Commands->Main);
 }
 
-void NPS_Main()
+// Our Commands System
+void CommandsSystem::Main()
+{
+	// Read Commands Arguments
+	const char* args = CommandArgv(1);
+
+	// Start Compare Args, if failed show help
+	if (compare(args, "version"))
+		return;
+	else if (compare(args, "xxx"))
+		return;
+	else
+		CommandsSystem().Help();
+}
+
+// Compare First... Make sure this at lowest
+// Because user input unsupported function, so we need a information
+// about our commands
+void CommandsSystem::Help()
 {
 
 }

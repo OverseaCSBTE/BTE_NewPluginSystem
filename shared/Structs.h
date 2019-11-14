@@ -1,15 +1,7 @@
 #ifndef Structs_h
 #define Structs_h
 
-struct engine_t
-{
-	enginefuncs_t *engineFuncs;
-	globalvars_t *globalVars;
-	enginefuncs_t *modifiedFuncs;
-	//EngineInfo
-};
-
-typedef struct 
+typedef struct gamedll_funcs_s
 {
 	DLL_FUNCTIONS *dllAPI;
 	NEW_DLL_FUNCTIONS *newAPI;
