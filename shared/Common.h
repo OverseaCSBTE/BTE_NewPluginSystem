@@ -10,10 +10,4 @@ extern gamedll_t GameDLL;
 #define hlsdkExport __stdcall
 #define DLLEXPORT __declspec(dllexport)
 #define ExportC extern "C" DLLEXPORT
-
-#define CvarReg (*gEngine.pfnCVarRegister)
-#define AddServerCommand (*gEngine.pfnAddServerCommand)
-#define ServerPrint (*gEngine.pfnServerPrint)
-#define GetGameDir (*gEngine.pfnGetGameDir)
-#define CommandArgv (*gEngine.pfnCmd_Argv)
 #endif

@@ -8,7 +8,7 @@ void Preload::Init()
 	%s (Version: %s)
 )";
 	// Send Some Basic Message To Console.
-	nps->logSys->PrintToConsole(msg, ProjectName, VersionString);
+	nps.logSys.PrintToConsole(msg, ProjectName, VersionString);
 
 	// Project Starting at Here!
 	// We need identify and init gamedll
@@ -16,7 +16,7 @@ void Preload::Init()
 		exit(0);
 
 	// Register our commands
-	nps->Commands->Init();
+	nps.Commands.Init();
 
 	// okay, we can connect dll to future use
 }
@@ -32,7 +32,7 @@ BOOL Preload::InitGameDLL()
 
 	if (!getcwd(buf, sizeof(buf)))
 	{
-		nps->logSys->Error("Unable To Find Directory.");
+		nps.logSys.Error("Unable To Find Directory.");
 		return FALSE;
 	}
 
@@ -55,23 +55,23 @@ BOOL Preload::LoadGameDLL()
 	// Find mp
 	if (!FindGameDLL())
 	{
-		nps->logSys->Error("Unable To Find DLL.");
+		nps.logSys.Error("Unable To Find DLL.");
 		exit(0);
 	}
 	
 	// Load mp
 	if (!(GameDLL.handle = LibOpen(GameDLL.pathname)))
 	{
-		nps->logSys->Error("Unable To Load DLL.");
+		nps.logSys.Error("Unable To Load DLL.");
 		exit(0);
 	}
 
 	// Send to engine
 	if (giveEngineFuncs = (GiveEngineFunctionFN)GetAddress(GameDLL.handle, "GiveFnptrsToDll"))
-		giveEngineFuncs(nps->game->enginefunc, nps->game->globals);
+		giveEngineFuncs(nps.game.enginefunc, nps.game.globals);
 	else
 	{
-		nps->logSys->Error("Unable To Find Required Places.");
+		nps.logSys.Error("Unable To Find Required Places.");
 		exit(0);
 	}
 

@@ -14,7 +14,7 @@ void LogSystem::PrintToConsole(const char* fmt, ...)
 		strcat(buf, "\n");
 	else
 		buf[len - 1] = '\n';
-
+	
 	ServerPrint(buf);
 }
 

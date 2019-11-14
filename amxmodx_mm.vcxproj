@@ -17,6 +17,7 @@
     <ClInclude Include="Resources\Version.h" />
     <ClInclude Include="shared\Classes.h" />
     <ClInclude Include="shared\Common.h" />
+    <ClInclude Include="shared\DefineEnginefuncs.h" />
     <ClInclude Include="shared\Main.h" />
     <ClInclude Include="shared\Structs.h" />
   </ItemGroup>
@@ -82,7 +83,7 @@
       <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)$(Configuration)\NewPluginSystem.dll" "D:\CSBTE\Counter-Strike SME v7.1\cstrike\dlls\"</Command>
+      <Command>copy "$(SolutionDir)$(Configuration)\NewPluginSystem.dll" "D:\Counter-Strike 1.6\cstrike\dlls\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,11 +91,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
       <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>metamod\metamod;hlsdk\common;hlsdk\engine;hlsdk\dlls;hlsdk\pm_shared;hlsdk\public</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;hlsdk\common;hlsdk\engine;hlsdk\dlls;hlsdk\pm_shared;hlsdk\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,7 +108,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)$(Configuration)\NewPluginSystem.dll" "D:\CSBTE\Counter-Strike SME v7.1\cstrike\dlls\"</Command>
+      <Command>copy "$(SolutionDir)$(Configuration)\NewPluginSystem.dll" "D:\Counter-Strike 1.6\cstrike\dlls\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -27,6 +27,9 @@
     <ClInclude Include="shared\Classes.h">
       <Filter>shared</Filter>
     </ClInclude>
+    <ClInclude Include="shared\DefineEnginefuncs.h">
+      <Filter>shared</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources\NewPluginSystem.rc">

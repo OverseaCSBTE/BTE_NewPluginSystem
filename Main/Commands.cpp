@@ -5,6 +5,7 @@ cvar_t npsVer = { "nps_Version", VersionString, FCVAR_EXTDLL, 0, NULL };
 
 void CommandsSystem::Init()
 {
+	nps.game.enginefunc->pfnCVarRegister(&npsDebug);
 	CvarReg(&npsDebug);
 	CvarReg(&npsVer);
 

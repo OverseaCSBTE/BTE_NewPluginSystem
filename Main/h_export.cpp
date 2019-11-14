@@ -1,7 +1,7 @@
 #include "shared\Main.h"
 
 // My Class
-NewPluginSystem* nps;
+NewPluginSystem nps;
 enginefuncs_t gEngine;
 gamedll_t GameDLL;
 
@@ -19,14 +19,14 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 	return TRUE;
 }
 
-extern "C" void hlsdkExport GiveFnptrsToDll(enginefuncs_t * pengfuncsFromEngine, globalvars_t * pGlobals)
+extern "C" __declspec(dllexport) void GiveFnptrsToDll(enginefuncs_t * pengfuncsFromEngine, globalvars_t * pGlobals)
 {
 	//memcpy(&g_engfuncs, pengfuncsFromEngine, sizeof(enginefuncs_t));
-	memcpy(nps->game->enginefunc, pengfuncsFromEngine, sizeof(enginefuncs_t));
-	nps->game->globals = pGlobals;
+	nps.game.enginefunc = pengfuncsFromEngine;
+	nps.game.globals = pGlobals;
 	//gpGlobals = pGlobals;
 
-	nps->pre->Init();
+	nps.pre.Init();
 }
 
 /*

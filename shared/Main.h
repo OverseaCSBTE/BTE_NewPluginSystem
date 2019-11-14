@@ -39,7 +39,7 @@ inline FARPROC GetAddress(HINSTANCE handle, const char* string)
 Get engine function table from engine
 So we need fuck dll in heeeere
 */
-ExportC void WINAPI GiveFnptrsToDll(enginefuncs_t *engine, globalvars_t *globals);
+extern "C" __declspec(dllexport) void GiveFnptrsToDll(enginefuncs_t * pengfuncsFromEngine, globalvars_t * pGlobals);
 
 // Every Classes Stored at here
 #include "shared/Classes.h"
@@ -48,13 +48,16 @@ ExportC void WINAPI GiveFnptrsToDll(enginefuncs_t *engine, globalvars_t *globals
 class NewPluginSystem
 {
 public:
-	Engine* game;
+	Engine game;
 public:
-	CommandsSystem *Commands;
-	Preload *pre;
-	LogSystem *logSys;
+	CommandsSystem Commands;
+	Preload pre;
+	LogSystem logSys;
 };
 
-extern NewPluginSystem* nps;
+extern NewPluginSystem nps;
+
+// Define enginefuncs with nps
+#include "shared/DefineEnginefuncs.h"
 
 #endif
