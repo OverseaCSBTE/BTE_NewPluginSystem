@@ -1,3 +1,7 @@
+# IMPORTANT!!
+Due some problems and developing problems, we are decided make this repo to Archived.
+Check new project on [Here!](https://github.com/HowToDoThis/ProjectServer)
+
 # BTE CustomAMXX
 A Custom Amxmodx For BTE. Project by NekoMeow
 
